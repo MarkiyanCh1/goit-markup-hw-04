@@ -76,7 +76,7 @@ img {
   margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 1.1;
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
@@ -320,7 +320,6 @@ header {
   flex-grow: 1;
   text-align: center;
   flex-basis: calc((100% - 72px) / 4);
-
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -332,12 +331,13 @@ header {
 }
 
 .team-card {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .team-item .social-list {
   display: flex;
   gap: 24px;
+  justify-content: center;
 }
 
 /** Team section socials hover and focus */
@@ -355,13 +355,14 @@ header {
 
 .customer-item {
   flex-basis: calc((100% - 72px) / 6);
+  height: 88px;
 }
 
 .customer-link {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  color: var(--subtle-text-color);
   padding-top: 16px;
   padding-bottom: 16px;
   border: 1px solid var(--subtle-text-color);
@@ -372,17 +373,18 @@ header {
 .customer-link:hover,
 .customer-link:focus {
   border-color: var(--pressed-state-color);
+  color: var(--pressed-state-color);
 }
 
 .customer-icon {
   display: flex;
-  fill: var(--subtle-text-color);
+  fill: currentColor;
 }
 
 /** Customers section icons hover and focus */
 .customer-link:hover .customer-icon,
 .customer-link:focus .customer-icon {
-  fill: var(--pressed-state-color);
+  fill: currentColor;
 }
 
 /** Filter section */
@@ -429,9 +431,7 @@ header {
 }
 
 .portfolio-link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  display: block;
 }
 
 /** Portfolio section socials hover and focus */
@@ -462,6 +462,7 @@ header {
 .footer-container {
   display: flex;
   gap: 120px;
+  align-items: baseline;
 }
 
 /** Footer info */
@@ -469,6 +470,7 @@ header {
   display: flex;
   flex-direction: column;
   max-width: 264px;
+  margin-right: 120px;
 }
 
 /** Footer logo */
@@ -488,7 +490,9 @@ header {
 /** Footer socials */
 .social-text {
   margin-bottom: 16px;
-  color: var(--light-color);
+  color: var(--white-background-color);
+  font-weight: 500;
+
 }
 
 .footer-social {
