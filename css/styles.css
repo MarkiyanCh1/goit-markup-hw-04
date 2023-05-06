@@ -367,6 +367,7 @@ header {
   padding-bottom: 16px;
   border: 1px solid var(--subtle-text-color);
   border-radius: 4px;
+  height: 100%;
 }
 
 /** Customers section border hover and focus */
